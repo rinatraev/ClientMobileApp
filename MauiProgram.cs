@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using ClientMobileApp.Services;
+using Microsoft.Extensions.Logging;
 
 namespace ClientMobileApp
 {
@@ -14,7 +15,7 @@ namespace ClientMobileApp
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-
+            builder.Services.AddSingleton<StringLocalizer>();
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
