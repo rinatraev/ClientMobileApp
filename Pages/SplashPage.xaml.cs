@@ -9,6 +9,6 @@ public partial class SplashPage : ContentPage
 	{
 		InitializeComponent();
 		var str = new StringLocalizer();
-		Test.Text = str.GetLocalizedString("_001", 1, "Rinat");
+		Test.Text = str.GetLocalizedString("_0001", 1, "Rinat");
 	}
 }

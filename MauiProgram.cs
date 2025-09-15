@@ -16,8 +16,12 @@ namespace ClientMobileApp
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
             builder.Services.AddSingleton<StringLocalizer>();
+            builder.Services.AddHttpClient<UserHttpService>(client =>
+            {
+                client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/");
+            });
 #if DEBUG
-    		builder.Logging.AddDebug();
+			builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
