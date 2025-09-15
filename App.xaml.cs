@@ -1,12 +1,12 @@
-﻿namespace ClientMobileApp
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+﻿using ClientMobileApp.Pages;
+namespace ClientMobileApp;
 
-            MainPage = new AppShell();
-        }
+public partial class App : Application
+{
+    public App()
+    {
+        InitializeComponent();
+
+        MainPage = new NavigationPage(new SplashPage());
     }
 }
