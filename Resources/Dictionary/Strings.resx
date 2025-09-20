@@ -117,10 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="buttonLogin" xml:space="preserve">
+    <value>Войти</value>
+    <comment>LoginPage</comment>
+  </data>
+  <data name="buttonRegister" xml:space="preserve">
+    <value>Зарегистрироваться</value>
+    <comment>LoginPage</comment>
+  </data>
+  <data name="entryPassPlaceholder" xml:space="preserve">
+    <value>Введите пароль</value>
+    <comment>LoginPage</comment>
+  </data>
+  <data name="entryUsernamePlaceholder" xml:space="preserve">
+    <value>Введите имя пользователя</value>
+    <comment>LoginPage</comment>
+  </data>
+  <data name="labelPassword" xml:space="preserve">
+    <value>Пароль</value>
+    <comment>LoginPage</comment>
+  </data>
+  <data name="labelUsername" xml:space="preserve">
+    <value>Имя пользователя</value>
+    <comment>LoginPage</comment>
+  </data>
+  <data name="labelWelcome" xml:space="preserve">
+    <value>Добро пожаловать !</value>
+    <comment>LoginPage</comment>
+  </data>
   <data name="_0001" xml:space="preserve">
     <value>{0} Добро пожаловать !</value>
   </data>
   <data name="_0002" xml:space="preserve">
     <value>Добро пожаловать !</value>
+  </data>
+  <data name="buttonForgotPassword" xml:space="preserve">
+    <value>Забыли пароль</value>
+    <comment>LoginPage</comment>
+  </data>
+  <data name="pickerTitleLang" xml:space="preserve">
+    <value>Язык</value>
+    <comment>LoginPage</comment>
   </data>
 </root>

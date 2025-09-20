@@ -117,10 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="buttonLogin" xml:space="preserve">
+    <value>Kirish</value>
+  </data>
+  <data name="buttonRegister" xml:space="preserve">
+    <value>Ro'yxatdan o'tish</value>
+  </data>
+  <data name="entryPassPlaceholder" xml:space="preserve">
+    <value>Parolni kiritng</value>
+  </data>
+  <data name="entryUsernamePlaceholder" xml:space="preserve">
+    <value>Uzerneymni kiriting</value>
+  </data>
+  <data name="labelPassword" xml:space="preserve">
+    <value>Parol</value>
+  </data>
+  <data name="labelUsername" xml:space="preserve">
+    <value>Foydalanuvchi userneymi</value>
+  </data>
+  <data name="labelWelcome" xml:space="preserve">
+    <value>Xush kelibsiz !</value>
+  </data>
   <data name="_0001" xml:space="preserve">
     <value>{0} Xush kelibsiz !</value>
   </data>
   <data name="_0002" xml:space="preserve">
     <value>Xush kelibsiz !</value>
+  </data>
+  <data name="buttonForgotPassword" xml:space="preserve">
+    <value>Parolni yangilash</value>
+  </data>
+  <data name="pickerTitleLang" xml:space="preserve">
+    <value>Ilova tili</value>
   </data>
 </root>

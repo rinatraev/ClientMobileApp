@@ -21,4 +21,5 @@ public class StringLocalizer
 
 		return value;
 	}
+	public static int CultureCode { get; set; } = 0;
 }

@@ -77,5 +77,86 @@ namespace ClientMobileApp.Resources.Dictionary {
                 return ResourceManager.GetString("_0002", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Забыли пароль.
+        /// </summary>
+        internal static string buttonForgotPassword {
+            get {
+                return ResourceManager.GetString("buttonForgotPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Войти.
+        /// </summary>
+        internal static string buttonLogin {
+            get {
+                return ResourceManager.GetString("buttonLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Зарегистрироваться.
+        /// </summary>
+        internal static string buttonRegister {
+            get {
+                return ResourceManager.GetString("buttonRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите пароль.
+        /// </summary>
+        internal static string entryPassPlaceholder {
+            get {
+                return ResourceManager.GetString("entryPassPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите имя пользователя.
+        /// </summary>
+        internal static string entryUsernamePlaceholder {
+            get {
+                return ResourceManager.GetString("entryUsernamePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пароль.
+        /// </summary>
+        internal static string labelPassword {
+            get {
+                return ResourceManager.GetString("labelPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Имя пользователя.
+        /// </summary>
+        internal static string labelUsername {
+            get {
+                return ResourceManager.GetString("labelUsername", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Добро пожаловать !.
+        /// </summary>
+        internal static string labelWelcome {
+            get {
+                return ResourceManager.GetString("labelWelcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Язык.
+        /// </summary>
+        internal static string pickerTitleLang {
+            get {
+                return ResourceManager.GetString("pickerTitleLang", resourceCulture);
+            }
+        }
     }
 }
