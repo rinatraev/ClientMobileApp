@@ -106,6 +106,15 @@ namespace ClientMobileApp.Resources.Dictionary {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Пропустить.
+        /// </summary>
+        internal static string buttonSkip {
+            get {
+                return ResourceManager.GetString("buttonSkip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Введите пароль.
         /// </summary>
         internal static string entryPassPlaceholder {

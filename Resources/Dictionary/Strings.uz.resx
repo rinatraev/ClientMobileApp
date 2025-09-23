@@ -144,10 +144,13 @@
   <data name="_0002" xml:space="preserve">
     <value>Xush kelibsiz !</value>
   </data>
+  <data name="pickerTitleLang" xml:space="preserve">
+    <value>Ilova tili</value>
+  </data>
   <data name="buttonForgotPassword" xml:space="preserve">
     <value>Parolni yangilash</value>
   </data>
-  <data name="pickerTitleLang" xml:space="preserve">
-    <value>Ilova tili</value>
+  <data name="buttonSkip" xml:space="preserve">
+    <value>O'tkazib yuborish</value>
   </data>
 </root>

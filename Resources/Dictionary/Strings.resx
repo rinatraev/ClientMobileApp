@@ -151,12 +151,16 @@
   <data name="_0002" xml:space="preserve">
     <value>Добро пожаловать !</value>
   </data>
+  <data name="pickerTitleLang" xml:space="preserve">
+    <value>Язык</value>
+    <comment>LoginPage</comment>
+  </data>
   <data name="buttonForgotPassword" xml:space="preserve">
     <value>Забыли пароль</value>
     <comment>LoginPage</comment>
   </data>
-  <data name="pickerTitleLang" xml:space="preserve">
-    <value>Язык</value>
+  <data name="buttonSkip" xml:space="preserve">
+    <value>Пропустить</value>
     <comment>LoginPage</comment>
   </data>
 </root>

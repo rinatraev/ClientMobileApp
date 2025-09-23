@@ -9,35 +9,62 @@
     <ContentPage.BindingContext>
         <vm:LoginViewModel/>
     </ContentPage.BindingContext>
-    <Grid Padding="5,0" RowDefinitions="Auto,*,Auto,Auto,Auto,Auto,*,*" ColumnDefinitions="*,*" ColumnSpacing="5" RowSpacing="5"
-          >
+    <Grid Padding="10,0" RowDefinitions="Auto,*,Auto,Auto,Auto,Auto,Auto,*,Auto" ColumnDefinitions="*,*" ColumnSpacing="5" RowSpacing="5"
+          IsEnabled="True">
         <Picker Grid.Row="0" Grid.Column="0" SelectedIndex="{Binding CultureCode}" Title="{Binding PickerTitleLang}" HorizontalTextAlignment="Center"
-                FontAttributes="Bold" FontSize="16" SelectedIndexChanged="PickerIndexChanged" >
+                FontAttributes="Bold" FontSize="16" SelectedIndexChanged="PickerIndexChanged" IsEnabled="{Binding IsEnabled}"
+                TextColor="Blue">
             <Picker.Items>
-                <x:String>Русский</x:String>
-                <x:String>O'zbekcha</x:String>
+                <x:String>🇷🇺 Русский</x:String>
+                <x:String>🇺🇿 O'zbek tili</x:String>
             </Picker.Items>
         </Picker>
 
-        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LabelWelcome}"
-               FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+        <Button Grid.Row="0" Grid.Column="1" Text="{Binding ButtonSkip}" VerticalOptions="End" Margin="0,0,0,5"
+        FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Blue" FontSize="15" IsEnabled="{Binding IsEnabled}">
+            <Button.Shadow>
+                <Shadow Brush="Black" Radius="5" Offset="0,0" Opacity="0.5"/>
+            </Button.Shadow>
+        </Button>
 
-        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LabelUsername}" FontAttributes="Bold" />
+        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center"
+            Source="company_logo.png"/>
 
-        <Entry Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="{Binding EntryUsernamePlaceholder}" ClearButtonVisibility="WhileEditing"
-               ReturnCommand="{Binding}"/>
+        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LabelWelcome}" TextColor="{Binding MainColor}"
+               FontAttributes="Bold" FontSize="27" HorizontalTextAlignment="Center" VerticalOptions="Center" 
+                CharacterSpacing="0" TextTransform="Uppercase" VerticalTextAlignment="Center">
+        </Label>
+        
+        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LabelUsername}" FontAttributes="Bold" 
+               FontSize="16"/>
 
-        <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LabelPassword}" FontAttributes="Bold" />
+        <Entry Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="{Binding EntryUsernamePlaceholder}"
+               FontSize="16" ReturnType="Next" Text="{Binding Username}"/>
 
-        <Entry Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="{Binding EntryPasswordPlaceholder}" ClearButtonVisibility="WhileEditing"
-               ReturnCommand="{Binding}"/>
+        <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LabelPassword}" FontAttributes="Bold" 
+               FontSize="16" />
 
-        <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding ButtonLogin}" VerticalOptions="Center"
-                Margin="20" FontAttributes="Bold" CharacterSpacing="1"/>
+        <Entry Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="{Binding EntryPasswordPlaceholder}"
+               FontSize="16" IsPassword="True" ReturnType="Done" Text="{Binding Password}"/>
 
-        <Button Grid.Row="7" Grid.Column="0" Text="{Binding ButtonForgotPassword}" VerticalOptions="End" Margin="0,0,0,5"
-                FontAttributes="Bold" />
-        <Button Grid.Row="8" Grid.Column="1" Text="{Binding ButtonRegister}" VerticalOptions="End" Margin="0,0,0,5"
-                FontAttributes="Bold" />
+        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding ButtonLogin}" VerticalOptions="Center"
+                Margin="20" FontAttributes="Bold" CharacterSpacing="1" BackgroundColor="{Binding MainColor}" FontSize="18"
+                IsEnabled="{Binding IsEnabled}" >
+            <Button.Shadow>
+                <Shadow Brush="Black" Radius="5" Offset="0,5" Opacity="0.5"/>
+            </Button.Shadow>
+        </Button>
+
+        <Button Grid.Row="8" Grid.Column="0" Text="{Binding ButtonForgotPassword}" VerticalOptions="End" Margin="0,0,0,5" Command="{Binding LoginCommand}"
+                FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Blue" FontSize="16" IsEnabled="{Binding IsEnabled}">
+            <Button.Shadow>
+                <Shadow Brush="Black" Radius="5" Offset="0,0" Opacity="0.5"/>
+            </Button.Shadow>
+        </Button>
+
+        <Button Grid.Row="9" Grid.Column="1" Text="{Binding ButtonRegister}" VerticalOptions="End" Margin="0,0,0,5"
+                FontAttributes="Bold" BackgroundColor="Transparent" TextColor="{Binding MainColor}" FontSize="16"
+                IsEnabled="{Binding IsEnabled}">
+        </Button>
     </Grid>
 </ContentPage>
