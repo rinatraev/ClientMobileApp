@@ -7,6 +7,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new NavigationPage(new LoginPage(new ViewModels.LoginViewModel()));
+        MainPage = new NavigationPage(new LoginPage());
     }
 }

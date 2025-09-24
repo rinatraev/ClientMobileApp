@@ -3,62 +3,32 @@ using ClientMobileApp.Services;
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.Input;
 using ClientMobileApp.Pages;
+using ClientMobileApp.Models.PageWordDictionaries;
 
 namespace ClientMobileApp.ViewModels;
 
 public partial class LoginViewModel : BaseViewModel
 {
-
+	[ObservableProperty]
+	private LoginPageLocalizedTexts localizedTexts;
 	public LoginViewModel()
 	{
-
+		LocalizedTexts = StringLocalizer.GetLocalizedTexts<LoginPageLocalizedTexts>();
 	}
+
+	
 	// UI
 	[ObservableProperty]
-	private string pickerTitleLang = Localizer.GetLocalizedString("pickerTitleLang", StringLocalizer.CultureCode);
-	[ObservableProperty]
-	private string buttonSkip = Localizer.GetLocalizedString("buttonSkip", StringLocalizer.CultureCode);
-	[ObservableProperty]
-	private string labelWelcome = Localizer.GetLocalizedString("labelWelcome", StringLocalizer.CultureCode);
-	//Username area
-	[ObservableProperty]
-	private string labelUsername = Localizer.GetLocalizedString("labelUsername", StringLocalizer.CultureCode);
-	//EntryUsername
-	[ObservableProperty]
-	private string entryUsernamePlaceholder = Localizer.GetLocalizedString("entryUsernamePlaceholder", StringLocalizer.CultureCode);
-	[ObservableProperty]
 	public string username = string.Empty;
-	//Password area
-	[ObservableProperty]
-	private string labelPassword = Localizer.GetLocalizedString("labelPassword", StringLocalizer.CultureCode);
-	//EntryPassword
-	[ObservableProperty]
-	private string entryPasswordPlaceholder = Localizer.GetLocalizedString("entryPassPlaceholder", StringLocalizer.CultureCode);
 	[ObservableProperty]
 	public string password = string.Empty;
 
-	[ObservableProperty]
-	private string buttonLogin = Localizer.GetLocalizedString("buttonLogin", StringLocalizer.CultureCode);
-	[ObservableProperty]
-	private string buttonForgotPassword = Localizer.GetLocalizedString("buttonForgotPassword", StringLocalizer.CultureCode);
-	[ObservableProperty]
-	private string buttonRegister = Localizer.GetLocalizedString("buttonRegister", StringLocalizer.CultureCode);
 
-	// BaseViewModel properties: IsBusy:bool, Title:string, CultureCode:int, MainColor:Color 
-	public void LocalizeContent()
+	// BaseViewModel properties: IsEnabled:bool, Title:string, CultureCode:int, MainColor:Color 
+	public override void LocalizeContent() 
 	{
 		IsEnabled = false;
-		StringLocalizer.CultureCode = CultureCode;
-		PickerTitleLang = Localizer.GetLocalizedString("pickerTitleLang", StringLocalizer.CultureCode);
-		ButtonSkip = Localizer.GetLocalizedString("buttonSkip", StringLocalizer.CultureCode);
-		LabelWelcome = Localizer.GetLocalizedString("labelWelcome", StringLocalizer.CultureCode);
-		LabelUsername = Localizer.GetLocalizedString("labelUsername", StringLocalizer.CultureCode);
-		EntryUsernamePlaceholder = Localizer.GetLocalizedString("entryUsernamePlaceholder", StringLocalizer.CultureCode);
-		LabelPassword = Localizer.GetLocalizedString("labelPassword", StringLocalizer.CultureCode);
-		EntryPasswordPlaceholder = Localizer.GetLocalizedString("entryPassPlaceholder", StringLocalizer.CultureCode);
-		ButtonLogin = Localizer.GetLocalizedString("buttonLogin", StringLocalizer.CultureCode);
-		ButtonForgotPassword =	Localizer.GetLocalizedString("buttonForgotPassword", StringLocalizer.CultureCode);
-		ButtonRegister = Localizer.GetLocalizedString("buttonRegister", StringLocalizer.CultureCode);
+		LocalizedTexts = StringLocalizer.GetLocalizedTexts<LoginPageLocalizedTexts>();
 		IsEnabled = true;
 	}
 

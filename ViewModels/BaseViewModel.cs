@@ -6,14 +6,18 @@ namespace ClientMobileApp.ViewModels;
 
 public partial class BaseViewModel : ObservableObject
 {
-	public static StringLocalizer Localizer { get; } = new StringLocalizer();
 	public UserHttpService _userHttpService = new(new HttpClient());
 	public BaseViewModel()
 	{
+		AppCultureCode = ApplicationMockDataProvider.AppCultureCode;
 	}
-
+	
 	[ObservableProperty]
-	private int cultureCode;
+	private int appCultureCode;
+	partial void OnAppCultureCodeChanged(int value)
+	{
+		ApplicationMockDataProvider.AppCultureCode = value;
+	}
 
 	[ObservableProperty]
 	private bool isEnabled = true;
@@ -24,6 +28,6 @@ public partial class BaseViewModel : ObservableObject
 	[ObservableProperty]
 	private Color mainColor = Color.FromRgba("#5bcec3");
 
-
+	public virtual void LocalizeContent() { }
 
 }

@@ -4,14 +4,13 @@
              xmlns:vm="clr-namespace:ClientMobileApp.ViewModels"
              x:Class="ClientMobileApp.Pages.LoginPage" 
              NavigationPage.HasNavigationBar="False"
-             NavigatedTo="LoginPage_NavigatedTo"
              > 
     <ContentPage.BindingContext>
         <vm:LoginViewModel/>
     </ContentPage.BindingContext>
     <Grid Padding="10,0" RowDefinitions="Auto,*,Auto,Auto,Auto,Auto,Auto,*,Auto" ColumnDefinitions="*,*" ColumnSpacing="5" RowSpacing="5"
           IsEnabled="True">
-        <Picker Grid.Row="0" Grid.Column="0" SelectedIndex="{Binding CultureCode}" Title="{Binding PickerTitleLang}" HorizontalTextAlignment="Center"
+        <Picker Grid.Row="0" Grid.Column="0" SelectedIndex="{Binding AppCultureCode}" Title="{Binding LocalizedTexts.LogPpickerTitleLang}" HorizontalTextAlignment="Center"
                 FontAttributes="Bold" FontSize="16" SelectedIndexChanged="PickerIndexChanged" IsEnabled="{Binding IsEnabled}"
                 TextColor="Blue">
             <Picker.Items>
@@ -20,7 +19,7 @@
             </Picker.Items>
         </Picker>
 
-        <Button Grid.Row="0" Grid.Column="1" Text="{Binding ButtonSkip}" VerticalOptions="End" Margin="0,0,0,5"
+        <Button Grid.Row="0" Grid.Column="1" Text="{Binding LocalizedTexts.LogPbuttonSkip}" VerticalOptions="End" Margin="0,0,0,5"
         FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Blue" FontSize="15" IsEnabled="{Binding IsEnabled}">
             <Button.Shadow>
                 <Shadow Brush="Black" Radius="5" Offset="0,0" Opacity="0.5"/>
@@ -30,39 +29,39 @@
         <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center"
             Source="company_logo.png"/>
 
-        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LabelWelcome}" TextColor="{Binding MainColor}"
-               FontAttributes="Bold" FontSize="27" HorizontalTextAlignment="Center" VerticalOptions="Center" 
-                CharacterSpacing="0" TextTransform="Uppercase" VerticalTextAlignment="Center">
-        </Label>
-        
-        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LabelUsername}" FontAttributes="Bold" 
-               FontSize="16"/>
+        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.LogPlabelUsername}" FontAttributes="Bold" 
+               FontSize="16" Margin="0,15,0,0"/>
 
-        <Entry Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="{Binding EntryUsernamePlaceholder}"
+        <Entry Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="{Binding LocalizedTexts.LogPentryUsernamePlaceholder}"
                FontSize="16" ReturnType="Next" Text="{Binding Username}"/>
 
-        <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LabelPassword}" FontAttributes="Bold" 
+        <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.LogPlabelPassword}" FontAttributes="Bold" 
                FontSize="16" />
 
-        <Entry Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="{Binding EntryPasswordPlaceholder}"
+        <Entry Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="{Binding LocalizedTexts.LogPentryPasswordPlaceholder}"
                FontSize="16" IsPassword="True" ReturnType="Done" Text="{Binding Password}"/>
 
-        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding ButtonLogin}" VerticalOptions="Center"
+        <HorizontalStackLayout Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2">
+            <CheckBox/>
+            <Label Text="{Binding LocalizedTexts.LogPlabelShowPassword}" VerticalTextAlignment="Center" />
+        </HorizontalStackLayout>
+
+        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.LogPbuttonLogin}" VerticalOptions="Center"
                 Margin="20" FontAttributes="Bold" CharacterSpacing="1" BackgroundColor="{Binding MainColor}" FontSize="18"
-                IsEnabled="{Binding IsEnabled}" >
+                IsEnabled="{Binding IsEnabled}" Command="{Binding LoginCommand}" >
             <Button.Shadow>
                 <Shadow Brush="Black" Radius="5" Offset="0,5" Opacity="0.5"/>
             </Button.Shadow>
         </Button>
 
-        <Button Grid.Row="8" Grid.Column="0" Text="{Binding ButtonForgotPassword}" VerticalOptions="End" Margin="0,0,0,5" Command="{Binding LoginCommand}"
+        <Button Grid.Row="8" Grid.Column="0" Text="{Binding LocalizedTexts.LogPbuttonForgot}" VerticalOptions="End" Margin="0,0,0,5"
                 FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Blue" FontSize="16" IsEnabled="{Binding IsEnabled}">
             <Button.Shadow>
                 <Shadow Brush="Black" Radius="5" Offset="0,0" Opacity="0.5"/>
             </Button.Shadow>
         </Button>
 
-        <Button Grid.Row="9" Grid.Column="1" Text="{Binding ButtonRegister}" VerticalOptions="End" Margin="0,0,0,5"
+        <Button Grid.Row="9" Grid.Column="1" Text="{Binding LocalizedTexts.LogPbuttonRegister}" VerticalOptions="End" Margin="0,0,0,5"
                 FontAttributes="Bold" BackgroundColor="Transparent" TextColor="{Binding MainColor}" FontSize="16"
                 IsEnabled="{Binding IsEnabled}">
         </Button>
