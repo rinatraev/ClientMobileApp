@@ -13,16 +13,18 @@ public partial class LoginViewModel : BaseViewModel
 	private LoginPageLocalizedTexts localizedTexts;
 	public LoginViewModel()
 	{
+		this.IsPassword = true;
 		LocalizedTexts = StringLocalizer.GetLocalizedTexts<LoginPageLocalizedTexts>();
 	}
 
 	
 	// UI
 	[ObservableProperty]
-	public string username = string.Empty;
+	private string username = string.Empty;
 	[ObservableProperty]
-	public string password = string.Empty;
-
+	private string password = string.Empty;
+	[ObservableProperty]
+	private bool isPassword;
 
 	// BaseViewModel properties: IsEnabled:bool, Title:string, CultureCode:int, MainColor:Color 
 	public override void LocalizeContent() 

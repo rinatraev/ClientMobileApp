@@ -38,11 +38,11 @@
         <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.LogPlabelPassword}" FontAttributes="Bold" 
                FontSize="16" />
 
-        <Entry Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="{Binding LocalizedTexts.LogPentryPasswordPlaceholder}"
-               FontSize="16" IsPassword="True" ReturnType="Done" Text="{Binding Password}"/>
+        <Entry Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="{Binding LocalizedTexts.LogPentryPassPlaceholder}"
+               FontSize="16" IsPassword="{Binding IsPassword}" ReturnType="Done" Text="{Binding Password}"/>
 
         <HorizontalStackLayout Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2">
-            <CheckBox/>
+            <CheckBox IsChecked="{Binding IsPassword, Converter={StaticResource InverseBoolConverter}}"/>
             <Label Text="{Binding LocalizedTexts.LogPlabelShowPassword}" VerticalTextAlignment="Center" />
         </HorizontalStackLayout>
 
