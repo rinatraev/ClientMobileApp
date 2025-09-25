@@ -2,12 +2,19 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:ClientMobileApp.ViewModels"
-             x:Class="ClientMobileApp.Pages.RegisterPage"
-             NavigationPage.HasNavigationBar="False">
+             x:Class="ClientMobileApp.Pages.ModalPages.EntryDataModalPage"
+             Title="EntryDataModalPage">
     <ContentPage.BindingContext>
         <vm:RegisterViewModel/>
     </ContentPage.BindingContext>
-    <VerticalStackLayout>
+    <Grid RowDefinitions="Auto" ColumnDefinitions="Auto">
         
-    </VerticalStackLayout>
+        
+        
+        
+        
+        
+        
+        
+    </Grid>
 </ContentPage>

@@ -17,5 +17,7 @@ public class LoginPageLocalizedTexts
 	public string? LogPbuttonLogin { get; set; }
 	public string? LogPbuttonForgot { get; set; }
 	public string? LogPbuttonRegister { get; set; }
+	public string? LogPloginAlertTitle { get; set; }
+	public string? LogPloginAlertMessage { get; set; }
 
 }

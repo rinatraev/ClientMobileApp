@@ -6,7 +6,7 @@ namespace ClientMobileApp.ViewModels;
 
 public partial class BaseViewModel : ObservableObject
 {
-	public UserHttpService _userHttpService = new(new HttpClient());
+	public UserHttpService _userHttpService = new();
 	public BaseViewModel()
 	{
 		AppCultureCode = ApplicationMockDataProvider.AppCultureCode;

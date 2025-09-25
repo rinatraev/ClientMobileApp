@@ -141,9 +141,6 @@
   <data name="_0002" xml:space="preserve">
     <value>Xush kelibsiz !</value>
   </data>
-  <data name="LogPpickerTitleLang" xml:space="preserve">
-    <value>Ilova tili</value>
-  </data>
   <data name="LogPbuttonSkip" xml:space="preserve">
     <value>O'tkazib yuborish</value>
   </data>
@@ -152,5 +149,14 @@
   </data>
   <data name="LogPlabelShowPassword" xml:space="preserve">
     <value>Parolni ko'rsatish</value>
+  </data>
+  <data name="LogPloginAlertTitle" xml:space="preserve">
+    <value>Satrlardan biri to'ldirilmagan</value>
+  </data>
+  <data name="LogPpickerTitleLang" xml:space="preserve">
+    <value>Ilova tili</value>
+  </data>
+  <data name="LogPloginAlertMessage" xml:space="preserve">
+    <value>Satrlar bo'sh bo'lmasligi kerak</value>
   </data>
 </root>

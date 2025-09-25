@@ -160,6 +160,24 @@ namespace ClientMobileApp.Resources.Dictionary {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Поля не должны быть пустыми.
+        /// </summary>
+        internal static string LogPloginAlertMessage {
+            get {
+                return ResourceManager.GetString("LogPloginAlertMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Одна из строк пустая.
+        /// </summary>
+        internal static string LogPloginAlertTitle {
+            get {
+                return ResourceManager.GetString("LogPloginAlertTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Язык.
         /// </summary>
         internal static string LogPpickerTitleLang {

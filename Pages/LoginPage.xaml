@@ -20,7 +20,8 @@
         </Picker>
 
         <Button Grid.Row="0" Grid.Column="1" Text="{Binding LocalizedTexts.LogPbuttonSkip}" VerticalOptions="End" Margin="0,0,0,5"
-        FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Blue" FontSize="15" IsEnabled="{Binding IsEnabled}">
+                FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Blue" FontSize="15" IsEnabled="{Binding IsEnabled}"
+                Command="{Binding SkipAuthorizationCommand}">
             <Button.Shadow>
                 <Shadow Brush="Black" Radius="5" Offset="0,0" Opacity="0.5"/>
             </Button.Shadow>
@@ -55,7 +56,8 @@
         </Button>
 
         <Button Grid.Row="8" Grid.Column="0" Text="{Binding LocalizedTexts.LogPbuttonForgot}" VerticalOptions="End" Margin="0,0,0,5"
-                FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Blue" FontSize="16" IsEnabled="{Binding IsEnabled}">
+                FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Blue" FontSize="16" IsEnabled="{Binding IsEnabled}"
+                Command="{Binding ForgotPasswordCommand}">
             <Button.Shadow>
                 <Shadow Brush="Black" Radius="5" Offset="0,0" Opacity="0.5"/>
             </Button.Shadow>
@@ -63,7 +65,7 @@
 
         <Button Grid.Row="9" Grid.Column="1" Text="{Binding LocalizedTexts.LogPbuttonRegister}" VerticalOptions="End" Margin="0,0,0,5"
                 FontAttributes="Bold" BackgroundColor="Transparent" TextColor="{Binding MainColor}" FontSize="16"
-                IsEnabled="{Binding IsEnabled}">
+                IsEnabled="{Binding IsEnabled}" Command="{Binding GoToRegisterPageCommand}">
         </Button>
     </Grid>
 </ContentPage>

@@ -37,15 +37,42 @@ public partial class LoginViewModel : BaseViewModel
 	[RelayCommand]
 	private async Task LoginAsync()
 	{
-		/*var content = _userHttpService.GetHttpContent(Username, Password);
-		var response = await _userHttpService.LoginAsync(content);
-		if (response != null)
+		if(string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
+		{ 
+			Application.Current?.MainPage?.DisplayAlert(LocalizedTexts.LogPloginAlertTitle, LocalizedTexts.LogPloginAlertMessage, "Ok");
+			return;
+		}
+		var content = _userHttpService.GetHttpContent(Username, Password);
+		var response = false;
+		try
+		{
+			response = await _userHttpService.LoginAsync(content);
+		}
+		catch (Exception ex)
+		{
+			await Application.Current?.MainPage?.DisplayAlert("Ошибка", ex.Message, "Ок");
+			return;
+		}
+		if (!response)
 		{
 			Application.Current?.MainPage?.DisplayAlert("Не получилось", "Повторите попытку", "Ок");
-		}*/
-
+			return;
+		}
 		await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
-
 	}
-	
+	[RelayCommand]
+	private async Task SkipAuthorizationAsync()
+	{
+		await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
+	}
+	[RelayCommand]
+	private async Task ForgotPasswordAsync()
+	{
+		await Application.Current.MainPage.DisplayAlert("Забыли пароль?", "Обратитесь к администратору", "Ок");
+	}
+	[RelayCommand]
+	private async Task GoToRegisterPageAsync()
+	{
+		await Application.Current.MainPage.Navigation.PushAsync(new RegisterPage());
+	}
 }
