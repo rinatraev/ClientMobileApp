@@ -3,7 +3,8 @@ using ClientMobileApp.Services;
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.Input;
 using ClientMobileApp.Pages;
-using ClientMobileApp.Models.PageWordDictionaries;
+using ClientMobileApp.Models.PageLocalizedTexts;
+using ClientMobileApp.Pages.ModalPages;
 
 namespace ClientMobileApp.ViewModels;
 
@@ -29,9 +30,9 @@ public partial class LoginViewModel : BaseViewModel
 	// BaseViewModel properties: IsEnabled:bool, Title:string, CultureCode:int, MainColor:Color 
 	public override void LocalizeContent() 
 	{
-		IsEnabled = false;
+		IsBusy = false;
 		LocalizedTexts = StringLocalizer.GetLocalizedTexts<LoginPageLocalizedTexts>();
-		IsEnabled = true;
+		IsBusy = true;
 	}
 
 	[RelayCommand]
@@ -39,7 +40,7 @@ public partial class LoginViewModel : BaseViewModel
 	{
 		if(string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
 		{ 
-			Application.Current?.MainPage?.DisplayAlert(LocalizedTexts.LogPloginAlertTitle, LocalizedTexts.LogPloginAlertMessage, "Ok");
+			Application.Current?.MainPage?.DisplayAlert(LocalizedTexts.P01MS00, LocalizedTexts.P01MS01, "Ok");
 			return;
 		}
 		var content = _userHttpService.GetHttpContent(Username, Password);
@@ -48,7 +49,7 @@ public partial class LoginViewModel : BaseViewModel
 		{
 			response = await _userHttpService.LoginAsync(content);
 		}
-		catch (Exception ex)
+		catch (Exception ex)	
 		{
 			await Application.Current?.MainPage?.DisplayAlert("Ошибка", ex.Message, "Ок");
 			return;
@@ -73,6 +74,6 @@ public partial class LoginViewModel : BaseViewModel
 	[RelayCommand]
 	private async Task GoToRegisterPageAsync()
 	{
-		await Application.Current.MainPage.Navigation.PushAsync(new RegisterPage());
+		await Application.Current.MainPage.Navigation.PushModalAsync(new PhoneNumberModalPage());
 	}
 }

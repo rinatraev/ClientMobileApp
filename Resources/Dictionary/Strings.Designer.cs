@@ -70,119 +70,164 @@ namespace ClientMobileApp.Resources.Dictionary {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Добро пожаловать !.
+        ///   Ищет локализованную строку, похожую на Одна из строк пустая.
         /// </summary>
-        internal static string _0002 {
+        internal static string P01MS00 {
             get {
-                return ResourceManager.GetString("_0002", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Забыли пароль.
-        /// </summary>
-        internal static string LogPbuttonForgot {
-            get {
-                return ResourceManager.GetString("LogPbuttonForgot", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Войти.
-        /// </summary>
-        internal static string LogPbuttonLogin {
-            get {
-                return ResourceManager.GetString("LogPbuttonLogin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Зарегистрироваться.
-        /// </summary>
-        internal static string LogPbuttonRegister {
-            get {
-                return ResourceManager.GetString("LogPbuttonRegister", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Пропустить.
-        /// </summary>
-        internal static string LogPbuttonSkip {
-            get {
-                return ResourceManager.GetString("LogPbuttonSkip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Введите пароль.
-        /// </summary>
-        internal static string LogPentryPassPlaceholder {
-            get {
-                return ResourceManager.GetString("LogPentryPassPlaceholder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Введите имя пользователя.
-        /// </summary>
-        internal static string LogPentryUsernamePlaceholder {
-            get {
-                return ResourceManager.GetString("LogPentryUsernamePlaceholder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Пароль.
-        /// </summary>
-        internal static string LogPlabelPassword {
-            get {
-                return ResourceManager.GetString("LogPlabelPassword", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Показать пароль.
-        /// </summary>
-        internal static string LogPlabelShowPassword {
-            get {
-                return ResourceManager.GetString("LogPlabelShowPassword", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Имя пользователя.
-        /// </summary>
-        internal static string LogPlabelUsername {
-            get {
-                return ResourceManager.GetString("LogPlabelUsername", resourceCulture);
+                return ResourceManager.GetString("P01MS00", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Поля не должны быть пустыми.
         /// </summary>
-        internal static string LogPloginAlertMessage {
+        internal static string P01MS01 {
             get {
-                return ResourceManager.GetString("LogPloginAlertMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Одна из строк пустая.
-        /// </summary>
-        internal static string LogPloginAlertTitle {
-            get {
-                return ResourceManager.GetString("LogPloginAlertTitle", resourceCulture);
+                return ResourceManager.GetString("P01MS01", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Язык.
         /// </summary>
-        internal static string LogPpickerTitleLang {
+        internal static string P01UI00 {
             get {
-                return ResourceManager.GetString("LogPpickerTitleLang", resourceCulture);
+                return ResourceManager.GetString("P01UI00", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пропустить.
+        /// </summary>
+        internal static string P01UI01 {
+            get {
+                return ResourceManager.GetString("P01UI01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Имя пользователя.
+        /// </summary>
+        internal static string P01UI02 {
+            get {
+                return ResourceManager.GetString("P01UI02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите имя пользователя.
+        /// </summary>
+        internal static string P01UI03 {
+            get {
+                return ResourceManager.GetString("P01UI03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пароль.
+        /// </summary>
+        internal static string P01UI04 {
+            get {
+                return ResourceManager.GetString("P01UI04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите пароль.
+        /// </summary>
+        internal static string P01UI05 {
+            get {
+                return ResourceManager.GetString("P01UI05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Показать пароль.
+        /// </summary>
+        internal static string P01UI06 {
+            get {
+                return ResourceManager.GetString("P01UI06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Войти.
+        /// </summary>
+        internal static string P01UI07 {
+            get {
+                return ResourceManager.GetString("P01UI07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Забыли пароль.
+        /// </summary>
+        internal static string P01UI08 {
+            get {
+                return ResourceManager.GetString("P01UI08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Зарегистрироваться.
+        /// </summary>
+        internal static string P01UI09 {
+            get {
+                return ResourceManager.GetString("P01UI09", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Регистрация.
+        /// </summary>
+        internal static string P02UI00 {
+            get {
+                return ResourceManager.GetString("P02UI00", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите номер телефона.
+        /// </summary>
+        internal static string P02UI01 {
+            get {
+                return ResourceManager.GetString("P02UI01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на На ваш номер отправлен 4-значный SMS код.
+        /// </summary>
+        internal static string P02UI02 {
+            get {
+                return ResourceManager.GetString("P02UI02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на  Я прочитал оферту и согласен с его условиями.
+        /// </summary>
+        internal static string P02UI03 {
+            get {
+                return ResourceManager.GetString("P02UI03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Далее .
+        /// </summary>
+        internal static string P02UI04 {
+            get {
+                return ResourceManager.GetString("P02UI04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Подтвердите пароль.
+        /// </summary>
+        internal static string P02UI05 {
+            get {
+                return ResourceManager.GetString("P02UI05", resourceCulture);
             }
         }
     }

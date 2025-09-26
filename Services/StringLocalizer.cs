@@ -1,6 +1,6 @@
 ﻿
 
-using ClientMobileApp.Models.PageWordDictionaries;
+using ClientMobileApp.Models.PageLocalizedTexts;
 using System.Globalization;
 using System.Resources;
 using System.Runtime.CompilerServices;

@@ -20,7 +20,7 @@ public partial class BaseViewModel : ObservableObject
 	}
 
 	[ObservableProperty]
-	private bool isEnabled = true;
+	private bool isBusy = true;
 
 	[ObservableProperty]
 	private string title = string.Empty;

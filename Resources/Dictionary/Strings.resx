@@ -117,58 +117,79 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LogPbuttonLogin" xml:space="preserve">
+  <data name="P01UI07" xml:space="preserve">
     <value>Войти</value>
     <comment>LoginPage</comment>
   </data>
-  <data name="LogPbuttonRegister" xml:space="preserve">
+  <data name="P01UI09" xml:space="preserve">
     <value>Зарегистрироваться</value>
     <comment>LoginPage</comment>
   </data>
-  <data name="LogPentryPassPlaceholder" xml:space="preserve">
+  <data name="P01UI05" xml:space="preserve">
     <value>Введите пароль</value>
     <comment>LoginPage</comment>
   </data>
-  <data name="LogPentryUsernamePlaceholder" xml:space="preserve">
+  <data name="P01UI03" xml:space="preserve">
     <value>Введите имя пользователя</value>
     <comment>LoginPage</comment>
   </data>
-  <data name="LogPlabelPassword" xml:space="preserve">
+  <data name="P01UI04" xml:space="preserve">
     <value>Пароль</value>
     <comment>LoginPage</comment>
   </data>
-  <data name="LogPlabelUsername" xml:space="preserve">
+  <data name="P01UI02" xml:space="preserve">
     <value>Имя пользователя</value>
     <comment>LoginPage</comment>
   </data>
   <data name="_0001" xml:space="preserve">
     <value>{0} Добро пожаловать !</value>
   </data>
-  <data name="_0002" xml:space="preserve">
-    <value>Добро пожаловать !</value>
-  </data>
-  <data name="LogPbuttonSkip" xml:space="preserve">
+  <data name="P01UI01" xml:space="preserve">
     <value>Пропустить</value>
     <comment>LoginPage</comment>
   </data>
-  <data name="LogPbuttonForgot" xml:space="preserve">
+  <data name="P01UI08" xml:space="preserve">
     <value>Забыли пароль</value>
     <comment>LoginPage</comment>
   </data>
-  <data name="LogPlabelShowPassword" xml:space="preserve">
+  <data name="P01UI06" xml:space="preserve">
     <value>Показать пароль</value>
     <comment>LoginPage</comment>
   </data>
-  <data name="LogPloginAlertTitle" xml:space="preserve">
+  <data name="P01MS00" xml:space="preserve">
     <value>Одна из строк пустая</value>
     <comment>LoginPage</comment>
   </data>
-  <data name="LogPpickerTitleLang" xml:space="preserve">
+  <data name="P01UI00" xml:space="preserve">
     <value>Язык</value>
     <comment>LoginPage</comment>
   </data>
-  <data name="LogPloginAlertMessage" xml:space="preserve">
+  <data name="P01MS01" xml:space="preserve">
     <value>Поля не должны быть пустыми</value>
     <comment>LoginPage</comment>
+  </data>
+  <data name="P02UI00" xml:space="preserve">
+    <value>Регистрация</value>
+    <comment>RegisterPage</comment>
+  </data>
+  <data name="P02UI01" xml:space="preserve">
+    <value>Введите номер телефона</value>
+    <comment>RegisterPage</comment>
+  </data>
+  <data name="P02UI02" xml:space="preserve">
+    <value>На ваш номер отправлен 4-значный SMS код</value>
+    <comment>RegisterPage</comment>
+  </data>
+  <data name="P02UI03" xml:space="preserve">
+    <value> Я прочитал оферту и согласен с его условиями</value>
+    <comment>RegisterPage</comment>
+  </data>
+  <data name="P02UI04" xml:space="preserve">
+    <value>Далее </value>
+    <comment>RegisterPage</comment>
+  </data>
+  <data name="P02UI05" xml:space="preserve">
+    <value>Подтвердите пароль</value>
+    <comment>RegisterPage</comment>
   </data>
 </root>

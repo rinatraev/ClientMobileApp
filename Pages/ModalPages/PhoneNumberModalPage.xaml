@@ -3,18 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:ClientMobileApp.ViewModels"
              x:Class="ClientMobileApp.Pages.ModalPages.PhoneNumberModalPage"
-             >
+             BackgroundColor="White" >
     <ContentPage.BindingContext>
         <vm:RegisterViewModel/>
     </ContentPage.BindingContext>
-    <Grid RowDefinitions="Auto" ColumnDefinitions="Auto">
+    <Border Padding="5,15,5,5" Margin="0,15,0,0" Stroke="Black" StrokeThickness="1"
+            Background="White">
+        <Border.Shadow>
+            <Shadow Brush="Black" Radius="10" Opacity="0.8" Offset="0,-8"/>
+        </Border.Shadow>
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="40,40,0,0"/>
+        </Border.StrokeShape>
 
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,*,Auto" ColumnDefinitions="Auto,*" Padding="5" 
+          ColumnSpacing="5" RowSpacing="5">
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P02UI00, StringFormat='{0} {{1/2}}'}" TextTransform="Uppercase" FontSize="30"
+                   FontAttributes="Bold" Background="red" HorizontalOptions="Center"/>
 
+            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P02UI01}" FontSize="16" 
+                   HorizontalOptions="Center"/>
 
+            <Entry Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Keyboard="Numeric" FontSize="24" CharacterSpacing="2" MaxLength="10"
+               Placeholder="998 901234567" HorizontalTextAlignment="Center" x:Name="entryPhoneNumber"> 
+            </Entry>
 
+            <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P02UI02}" FontSize="16"
+               HorizontalOptions="Center" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="2" Command="{Binding showSMSCodeCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
 
+            <Entry Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="[][][][]" Keyboard="Numeric" IsEnabled="True"
+               CharacterSpacing="16" MaxLength="4" FontSize="36" HorizontalTextAlignment="Center" >
+            </Entry>
 
+            <CheckBox Grid.Row="5" Grid.Column="0" VerticalOptions="End" IsChecked="{Binding TermsChecked}"/>
+            <Label Grid.Row="5" Grid.Column="1" Text="{Binding LocalizedTexts.P02UI03}" VerticalOptions="End"
+               VerticalTextAlignment="Center" FontSize="16" />
 
-
-    </Grid>
+            <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P02UI04}" Clicked="Button_Clicked" VerticalOptions="End" IsEnabled="{Binding TermsChecked}"/>
+        </Grid>
+    </Border>
 </ContentPage>

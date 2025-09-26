@@ -7,14 +7,35 @@
     <ContentPage.BindingContext>
         <vm:RegisterViewModel/>
     </ContentPage.BindingContext>
-    <Grid RowDefinitions="Auto" ColumnDefinitions="Auto">
-        
-        
-        
-        
-        
-        
-        
-        
-    </Grid>
+    <Border Padding="5,15,5,5" Margin="0,20,0,0" Stroke="Black" StrokeThickness="1"
+        Background="White">
+        <Border.Shadow>
+            <Shadow Brush="Black" Radius="10" Opacity="0.8" Offset="0,-8"/>
+        </Border.Shadow>
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="40,40,0,0"/>
+        </Border.StrokeShape>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*" Padding="5" 
+          ColumnSpacing="5" RowSpacing="5">
+            <Label Grid.Row="0" Text="{Binding LocalizedTexts.P02UI00, StringFormat='{0} {{2/2}}'}" TextTransform="Uppercase" FontSize="30"
+                   FontAttributes="Bold" Background="red" HorizontalOptions="Center"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P01UI03}" FontSize="16" 
+                   HorizontalOptions="Center"/>
+
+            <Entry Grid.Row="2" />
+
+            <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P01UI05}" FontSize="16" 
+                    HorizontalOptions="Center"/>
+
+            <Entry Grid.Row="4" IsEnabled="False"/>
+
+            <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P02UI05}" FontSize="16" 
+                   HorizontalOptions="Center"/>
+
+            <Entry Grid.Row="6" IsEnabled="False"/>
+
+            <Button Grid.Row="7" Text="{Binding LocalizedTexts.P01UI09}" VerticalOptions="End" />
+        </Grid>
+    </Border>
 </ContentPage>

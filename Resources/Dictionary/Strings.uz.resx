@@ -117,46 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LogPbuttonLogin" xml:space="preserve">
+  <data name="P01UI07" xml:space="preserve">
     <value>Kirish</value>
   </data>
-  <data name="LogPbuttonRegister" xml:space="preserve">
+  <data name="P01UI09" xml:space="preserve">
     <value>Ro'yxatdan o'tish</value>
   </data>
-  <data name="LogPentryPassPlaceholder" xml:space="preserve">
+  <data name="P01UI05" xml:space="preserve">
     <value>Parolni kiritng</value>
   </data>
-  <data name="LogPentryUsernamePlaceholder" xml:space="preserve">
+  <data name="P01UI03" xml:space="preserve">
     <value>Uzerneymni kiriting</value>
   </data>
-  <data name="LogPlabelPassword" xml:space="preserve">
+  <data name="P01UI04" xml:space="preserve">
     <value>Parol</value>
   </data>
-  <data name="LogPlabelUsername" xml:space="preserve">
+  <data name="P01UI02" xml:space="preserve">
     <value>Foydalanuvchi userneymi</value>
   </data>
   <data name="_0001" xml:space="preserve">
     <value>{0} Xush kelibsiz !</value>
   </data>
-  <data name="_0002" xml:space="preserve">
-    <value>Xush kelibsiz !</value>
-  </data>
-  <data name="LogPbuttonSkip" xml:space="preserve">
+  <data name="P01UI01" xml:space="preserve">
     <value>O'tkazib yuborish</value>
   </data>
-  <data name="LogPbuttonForgot" xml:space="preserve">
+  <data name="P01UI08" xml:space="preserve">
     <value>Parolni yangilash</value>
   </data>
-  <data name="LogPlabelShowPassword" xml:space="preserve">
+  <data name="P01UI06" xml:space="preserve">
     <value>Parolni ko'rsatish</value>
   </data>
-  <data name="LogPloginAlertTitle" xml:space="preserve">
+  <data name="P01MS00" xml:space="preserve">
     <value>Satrlardan biri to'ldirilmagan</value>
   </data>
-  <data name="LogPpickerTitleLang" xml:space="preserve">
+  <data name="P01UI00" xml:space="preserve">
     <value>Ilova tili</value>
   </data>
-  <data name="LogPloginAlertMessage" xml:space="preserve">
+  <data name="P01MS01" xml:space="preserve">
     <value>Satrlar bo'sh bo'lmasligi kerak</value>
+  </data>
+  <data name="P02UI00" xml:space="preserve">
+    <value>Ro'yxatdan o'tish</value>
+  </data>
+  <data name="P02UI01" xml:space="preserve">
+    <value>Raqamingizni kiriting</value>
+  </data>
+  <data name="P02UI02" xml:space="preserve">
+    <value>Raqamingizga 4 xonali SMS kod yuborildi</value>
+  </data>
+  <data name="P02UI03" xml:space="preserve">
+    <value>Men oferta bilan tanishib chiqdim va shartlariga roziman </value>
+  </data>
+  <data name="P02UI04" xml:space="preserve">
+    <value>Davom etish</value>
+  </data>
+  <data name="P02UI05" xml:space="preserve">
+    <value>Parolni takroran kiriting</value>
   </data>
 </root>
