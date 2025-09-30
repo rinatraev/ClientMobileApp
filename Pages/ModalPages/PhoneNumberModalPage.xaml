@@ -15,45 +15,51 @@
         <Border.StrokeShape>
             <RoundRectangle CornerRadius="40,40,0,0"/>
         </Border.StrokeShape>
-
+        <Border.GestureRecognizers>
+            <SwipeGestureRecognizer Direction="Down" Command="{Binding PopModalPageCommand}"/>
+        </Border.GestureRecognizers>
         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,*,Auto" ColumnDefinitions="Auto,*" Padding="5" 
           ColumnSpacing="5" RowSpacing="5">
-            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" TextTransform="Uppercase" FontSize="30"
-                   FontAttributes="Bold" HorizontalOptions="Center" TextColor="Blue" FontFamily="OpenSansSemibold">
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="30"
+                   FontAttributes="Bold" HorizontalOptions="Center" TextColor="Blue" FontFamily="OpenSansSemibold"
+                   >
                 <Label.Shadow>
                     <Shadow Brush="Black" Radius="5" Offset="0,0" Opacity="0.5"/>
                 </Label.Shadow>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="{Binding LocalizedTexts.P02UI00}" />
-                        <Span Text="&#125;{2/2}&#125;" />
+                        <Span Text="{Binding LocalizedTexts.P02UI00}" TextColor="DarkBlue"/>
+                        <Span Text="[1/2]" TextColor="Red"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
 
             <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P02UI01}" FontSize="16" 
-                   HorizontalOptions="Start" />
+                   HorizontalOptions="Start" TextColor="DarkBlue" FontAttributes="Bold" />
 
-            <Entry Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Keyboard="Numeric" FontSize="24" CharacterSpacing="2" MaxLength="10"
-               Placeholder="998 901234567" HorizontalTextAlignment="Center" x:Name="entryPhoneNumber"> 
+            <Entry Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Keyboard="Numeric" FontSize="24" CharacterSpacing="2" MaxLength="12"
+               Placeholder="998 901234567" HorizontalTextAlignment="Center" x:Name="entryPhoneNumber"
+                   Text="{Binding PhoneNumber}"> 
             </Entry>
 
             <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P02UI02}" FontSize="16"
-                   HorizontalOptions="Start" >
+                   HorizontalOptions="Start" TextColor="DarkBlue" FontAttributes="Bold" >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer NumberOfTapsRequired="2" Command="{Binding showSMSCodeCommand}" />
                 </Label.GestureRecognizers>
             </Label>
 
             <Entry Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="[][][][]" Keyboard="Numeric" IsEnabled="True"
-               CharacterSpacing="16" MaxLength="4" FontSize="36" HorizontalTextAlignment="Center" >
+               CharacterSpacing="16" MaxLength="4" FontSize="36" HorizontalTextAlignment="Center"
+                   Text="{Binding SmsCode}" >
             </Entry>
 
-            <CheckBox Grid.Row="5" Grid.Column="0" IsChecked="{Binding TermsChecked}" VerticalOptions="End" />
+            <CheckBox Grid.Row="5" Grid.Column="0" IsChecked="{Binding TermsChecked}" VerticalOptions="End" Color="Green"/>
             <Label Grid.Row="5" Grid.Column="1" Text="{Binding LocalizedTexts.P02UI03}" VerticalOptions="End"
                VerticalTextAlignment="Center" FontSize="17" />
 
-            <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P02UI04}" Clicked="Button_Clicked" VerticalOptions="End" IsEnabled="{Binding TermsChecked}"/>
+            <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P02UI04}" Clicked="Button_Clicked" VerticalOptions="End" IsEnabled="{Binding TermsChecked}"
+                    BackgroundColor="Green" FontSize="16" />
         </Grid>
     </Border>
 </ContentPage>

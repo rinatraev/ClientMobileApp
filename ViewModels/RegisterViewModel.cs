@@ -14,12 +14,28 @@ public partial class RegisterViewModel : BaseViewModel
 	{
 		LocalizedTexts = StringLocalizer.GetLocalizedTexts<RegisterPageLocalizedTexts>();
 	}
+
+	[ObservableProperty]
+	private string phoneNumber = string.Empty;
+	[ObservableProperty]
+	private string smsCode = string.Empty;
+	[ObservableProperty]
+	private string username = string.Empty;
+	[ObservableProperty]
+	private string password = string.Empty;
+	[ObservableProperty]
+	private string confirmPassword = string.Empty;
 	[ObservableProperty]
 	private bool termsChecked = false;
 	[RelayCommand]
-	private async Task showSMSCode()
+	private async Task ShowSMSCode()
 	{
 		await Application.Current.MainPage.DisplayAlert("SMS code", "2234", "Ok");
+	}
+	[RelayCommand]
+	private async Task PopModalPage()
+	{
+		await Application.Current.MainPage.Navigation.PopModalAsync();
 	}
 	public override void LocalizeContent()
 	{

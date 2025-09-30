@@ -15,34 +15,41 @@
         <Border.StrokeShape>
             <RoundRectangle CornerRadius="40,40,0,0"/>
         </Border.StrokeShape>
+        <Border.GestureRecognizers>
+            <SwipeGestureRecognizer Direction="Down" Command="{Binding PopModalPageCommand}"/>
+        </Border.GestureRecognizers>
         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*" Padding="5" 
           ColumnSpacing="5" RowSpacing="5">
-            <Label Grid.Row="0" TextTransform="Uppercase" FontSize="30"
+            <Label Grid.Row="0" FontSize="30"
                    FontAttributes="Bold" HorizontalOptions="Center" TextColor="Blue">
+                <Label.Shadow>
+                    <Shadow Brush="Black" Radius="5" Offset="0,0" Opacity="0.5"/>
+                </Label.Shadow>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="{Binding LocalizedTexts.P02UI00}" />
-                        <Span Text="&#125;{2/2}&#125;" />
+                        <Span Text="{Binding LocalizedTexts.P02UI00}" TextColor="DarkBlue"  />
+                        <Span Text="[2/2]" TextColor="Red"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
 
             <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P01UI03}" FontSize="16" 
-                   HorizontalOptions="Center"/>
+                   HorizontalOptions="Start" TextColor="DarkBlue" FontAttributes="Bold" />
 
-            <Entry Grid.Row="2" />
+            <Entry Grid.Row="2" Text="{Binding Username}" FontSize="15"/>
 
             <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P01UI05}" FontSize="16" 
-                    HorizontalOptions="Center"/>
+                    HorizontalOptions="Start" TextColor="DarkBlue" FontAttributes="Bold" />
 
-            <Entry Grid.Row="4" IsEnabled="False"/>
+            <Entry Grid.Row="4" Text="{Binding Password}" FontSize="15"/>
 
             <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P02UI05}" FontSize="16" 
-                   HorizontalOptions="Center"/>
+                   HorizontalOptions="Start" TextColor="DarkBlue" FontAttributes="Bold"/>
 
-            <Entry Grid.Row="6" IsEnabled="False"/>
+            <Entry Grid.Row="6" Text="{Binding ConfirmPassword}" FontSize="15"/>
 
-            <Button Grid.Row="7" Text="{Binding LocalizedTexts.P01UI09}" VerticalOptions="End" />
+            <Button Grid.Row="7" Text="{Binding LocalizedTexts.P01UI09}" VerticalOptions="End" BackgroundColor="Green"
+                    FontSize="16"/>
         </Grid>
     </Border>
 </ContentPage>
