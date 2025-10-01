@@ -17,4 +17,8 @@ public class RegisterPageLocalizedTexts
 	public string? P01UI05 { get; set; } // Label Password
 	public string? P02UI05 { get; set; } // Label Confirm Password
 	public string? P01UI09 { get; set; } // RegisterButton
+	public string? P02MS00 { get; set; } // Alert Title
+	public string? P02MS01 { get; set; } // Alert Succes Title
+	public string? P02MS02 { get; set; } // Alert Success Message
+
 }

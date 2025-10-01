@@ -12,7 +12,7 @@ public partial class LoginViewModel : BaseViewModel
 {
 	[ObservableProperty]
 	private LoginPageLocalizedTexts localizedTexts;
-	public LoginViewModel()
+	public LoginViewModel(UserHttpService httpService):base(httpService)
 	{
 		this.IsPassword = true;
 		LocalizedTexts = StringLocalizer.GetLocalizedTexts<LoginPageLocalizedTexts>();
@@ -43,7 +43,7 @@ public partial class LoginViewModel : BaseViewModel
 			Application.Current?.MainPage?.DisplayAlert(LocalizedTexts.P01MS00, LocalizedTexts.P01MS01, "Ok");
 			return;
 		}
-		var content = _userHttpService.GetHttpContent(Username, Password);
+		var content = _userHttpService.GetHttpContent(Username, Password, string.Empty);
 		var response = false;
 		try
 		{

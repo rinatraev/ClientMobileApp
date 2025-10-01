@@ -19,5 +19,4 @@ public class LoginPageLocalizedTexts
 	public string? P01UI09 { get; set; }
 	public string? P01MS00 { get; set; }
 	public string? P01MS01 { get; set; }
-
 }

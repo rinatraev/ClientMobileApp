@@ -9,6 +9,7 @@ public partial class PhoneNumberModalPage : ContentPage
 
 	private void Button_Clicked(object sender, EventArgs e)
 	{
-		Application.Current.MainPage.Navigation.PushModalAsync(new EntryDataModalPage());
+		var vm = this.BindingContext;
+		Application.Current.MainPage.Navigation.PushModalAsync(new EntryDataModalPage() { BindingContext = vm });
     }
 }

@@ -174,4 +174,13 @@
   <data name="P02UI05" xml:space="preserve">
     <value>Parolni takroran kiriting</value>
   </data>
+  <data name="P02MS00" xml:space="preserve">
+    <value>Xatolik</value>
+  </data>
+  <data name="P02MS01" xml:space="preserve">
+    <value>Tayyor</value>
+  </data>
+  <data name="P02MS02" xml:space="preserve">
+    <value>Muvaffaqiyatli ro'yxatdan o'tdingiz. Kirish sahifasiga yo'naltirilasiz</value>
+  </data>
 </root>

@@ -4,11 +4,12 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace ClientMobileApp.ViewModels;
 
-public partial class BaseViewModel : ObservableObject
+public abstract partial class BaseViewModel : ObservableObject
 {
-	public UserHttpService _userHttpService = new();
-	public BaseViewModel()
+	public UserHttpService _userHttpService;
+	public BaseViewModel(UserHttpService httpService)
 	{
+		_userHttpService = httpService;
 		AppCultureCode = ApplicationMockDataProvider.AppCultureCode;
 	}
 	

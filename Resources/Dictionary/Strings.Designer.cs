@@ -178,6 +178,33 @@ namespace ClientMobileApp.Resources.Dictionary {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Ошибка.
+        /// </summary>
+        internal static string P02MS00 {
+            get {
+                return ResourceManager.GetString("P02MS00", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Готово.
+        /// </summary>
+        internal static string P02MS01 {
+            get {
+                return ResourceManager.GetString("P02MS01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Регистрация пройдена успешно. Вы будете перенаправлены на страницу входа.
+        /// </summary>
+        internal static string P02MS02 {
+            get {
+                return ResourceManager.GetString("P02MS02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Регистрация.
         /// </summary>
         internal static string P02UI00 {

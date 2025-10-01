@@ -6,9 +6,4 @@ public partial class EntryDataModalPage : ContentPage
 	{
 		InitializeComponent();
 	}
-
-	private void SwipeGestureRecognizer_Swiped(object sender, SwipedEventArgs e)
-	{
-
-    }
 }

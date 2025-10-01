@@ -2,10 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:ClientMobileApp.ViewModels"
+             xmlns:services="clr-namespace:ClientMobileApp.Services"
              x:Class="ClientMobileApp.Pages.ModalPages.PhoneNumberModalPage"
              BackgroundColor="White" >
     <ContentPage.BindingContext>
-        <vm:RegisterViewModel/>
+        <vm:RegisterViewModel>
+            <x:Arguments>
+                <services:UserHttpService/>
+            </x:Arguments>
+        </vm:RegisterViewModel>
     </ContentPage.BindingContext>
     <Border Padding="5,15,5,5" Margin="0,15,0,0" Stroke="Black" StrokeThickness="1"
             BackgroundColor="Azure" >
@@ -29,7 +34,7 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="{Binding LocalizedTexts.P02UI00}" TextColor="DarkBlue"/>
-                        <Span Text="[1/2]" TextColor="Red"/>
+                        <Span Text="1/2" TextColor="Red"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
@@ -45,7 +50,7 @@
             <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P02UI02}" FontSize="16"
                    HorizontalOptions="Start" TextColor="DarkBlue" FontAttributes="Bold" >
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer NumberOfTapsRequired="2" Command="{Binding showSMSCodeCommand}" />
+                    <TapGestureRecognizer NumberOfTapsRequired="2" Command="{Binding ShowSmsCodeCommand}" />
                 </Label.GestureRecognizers>
             </Label>
 
@@ -54,12 +59,12 @@
                    Text="{Binding SmsCode}" >
             </Entry>
 
-            <CheckBox Grid.Row="5" Grid.Column="0" IsChecked="{Binding TermsChecked}" VerticalOptions="End" Color="Green"/>
+            <CheckBox Grid.Row="5" Grid.Column="0" IsChecked="{Binding TermsChecked}" VerticalOptions="End" Color="{StaticResource MainColor}"/>
             <Label Grid.Row="5" Grid.Column="1" Text="{Binding LocalizedTexts.P02UI03}" VerticalOptions="End"
                VerticalTextAlignment="Center" FontSize="17" />
 
             <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocalizedTexts.P02UI04}" Clicked="Button_Clicked" VerticalOptions="End" IsEnabled="{Binding TermsChecked}"
-                    BackgroundColor="Green" FontSize="16" />
+                    BackgroundColor="{StaticResource MainColor}" FontSize="16" />
         </Grid>
     </Border>
 </ContentPage>

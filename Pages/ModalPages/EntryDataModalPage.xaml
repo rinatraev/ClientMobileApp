@@ -2,10 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:ClientMobileApp.ViewModels"
+             xmlns:services="clr-namespace:ClientMobileApp.Services"
              x:Class="ClientMobileApp.Pages.ModalPages.EntryDataModalPage"
              Title="EntryDataModalPage">
     <ContentPage.BindingContext>
-        <vm:RegisterViewModel/>
+        <vm:RegisterViewModel>
+            <x:Arguments>
+                <services:UserHttpService/>
+            </x:Arguments>
+        </vm:RegisterViewModel>
     </ContentPage.BindingContext>
     <Border Padding="5,15,5,5" Margin="0,20,0,0" Stroke="Black" StrokeThickness="1"
         BackgroundColor="Azure">
@@ -28,7 +33,7 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="{Binding LocalizedTexts.P02UI00}" TextColor="DarkBlue"  />
-                        <Span Text="[2/2]" TextColor="Red"/>
+                        <Span Text="2/2" TextColor="Red"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
@@ -48,8 +53,8 @@
 
             <Entry Grid.Row="6" Text="{Binding ConfirmPassword}" FontSize="15"/>
 
-            <Button Grid.Row="7" Text="{Binding LocalizedTexts.P01UI09}" VerticalOptions="End" BackgroundColor="Green"
-                    FontSize="16"/>
+            <Button Grid.Row="7" Text="{Binding LocalizedTexts.P01UI09}" VerticalOptions="End" BackgroundColor="{StaticResource MainColor}"
+                    FontSize="16" Command="{Binding RegisterCommand}"/>
         </Grid>
     </Border>
 </ContentPage>

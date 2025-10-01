@@ -192,4 +192,16 @@
     <value>Подтвердите пароль</value>
     <comment>RegisterPage</comment>
   </data>
+  <data name="P02MS00" xml:space="preserve">
+    <value>Ошибка</value>
+    <comment>RegisterPage</comment>
+  </data>
+  <data name="P02MS01" xml:space="preserve">
+    <value>Готово</value>
+    <comment>RegisterPage</comment>
+  </data>
+  <data name="P02MS02" xml:space="preserve">
+    <value>Регистрация пройдена успешно. Вы будете перенаправлены на страницу входа</value>
+    <comment>RegisterPage</comment>
+  </data>
 </root>

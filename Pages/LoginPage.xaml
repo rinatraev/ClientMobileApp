@@ -2,16 +2,21 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:ClientMobileApp.ViewModels"
+             xmlns:services="clr-namespace:ClientMobileApp.Services"
              x:Class="ClientMobileApp.Pages.LoginPage" 
              NavigationPage.HasNavigationBar="False"
-             > 
+             >
     <ContentPage.BindingContext>
-        <vm:LoginViewModel/>
+        <vm:LoginViewModel>
+            <x:Arguments>
+                <services:UserHttpService/>
+            </x:Arguments>
+        </vm:LoginViewModel>
     </ContentPage.BindingContext>
     <Grid Padding="10,0" RowDefinitions="Auto,*,Auto,Auto,Auto,Auto,Auto,*,Auto" ColumnDefinitions="*,*" ColumnSpacing="5" RowSpacing="5"
           IsEnabled="True">
         <Picker Grid.Row="0" Grid.Column="0" SelectedIndex="{Binding AppCultureCode}" Title="{Binding LocalizedTexts.P01UI00}" HorizontalTextAlignment="Center"
-                FontAttributes="Bold" FontSize="16" SelectedIndexChanged="PickerIndexChanged" IsEnabled="{Binding IsEnabled}"
+                FontAttributes="Bold" FontSize="16" SelectedIndexChanged="PickerIndexChanged"
                 TextColor="Blue">
             <Picker.Items>
                 <x:String>🇷🇺 Русский</x:String>

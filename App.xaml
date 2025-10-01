@@ -6,6 +6,7 @@
              x:Class="ClientMobileApp.App">
     <Application.Resources>
         <ResourceDictionary>
+            <Color x:Key="MainColor">#5bcec3</Color>
             <converters:InverseBoolConverter x:Key="InverseBoolConverter"/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
